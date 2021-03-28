@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+struct node{
+	int data=0;
+	node * add;
+};
+
+void insertLL(int value,node * head )
+{
+cout<<head<<" ";
+head=new node();
+cout<<head<<" ";
+}
+int main()
+{
+	node *head=new node();
+	cout<<"give the values for liked list and press -1 if you finished the insertion of input value"<<endl;
+
+	int i=0;
+	cin>>i;
+	
+	while(i!=-1)
+	{
+		cout<<head<<" ";
+		insertLL(i,head);
+		cout<<head<<" ";
+		cin>>i;
+	}
+
+	//printLL();
+}
+//actually head(which is created in main) is pass by value.
+//so whatever changes occur in insertLL folder in head doesnot create any difference in head (of main) variable.
