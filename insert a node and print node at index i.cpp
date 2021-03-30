@@ -49,13 +49,14 @@ node* insertatindex(node *head,int i,int data,node *& tail)
 	while(temp!=NULL && count< i-1){
 		temp=temp->addr;
 		count++;
+		
+	}
+
+	if(temp!=NULL){
 		if( count==i-1 && temp->addr==NULL )
 		{
 			tail=newnode;
 		}
-	}
-
-	if(temp!=NULL){
 		node *a=temp->addr;
 		temp->addr=newnode;
 		newnode->addr=a;
